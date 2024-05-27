@@ -13,11 +13,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
+            text-align: center;
         }
         .container {
             width: 80%;
-            max-width: 800px;
+            max-width: 1000px;
             background-color: #fff;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -41,6 +42,7 @@
             list-style: none;
             padding: 0;
             width: 100%;
+            text-align: left;
         }
         li {
             margin: 10px 0;
@@ -51,6 +53,24 @@
         }
         a:hover {
             text-decoration: underline;
+        }
+        .badge {
+            display: inline-block;
+            background-color: #007acc;
+            color: white;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        .columns {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .column {
+            width: 45%;
         }
         footer {
             text-align: center;
@@ -87,34 +107,76 @@
             <li><a href="#">Interview Preparation</a></li>
         </ul>
         <h2>Average Salaries</h2>
-        <ul>
-            <li><a href="#">Software Engineer: $90,000 - $120,000</a></li>
-            <li><a href="#">DevOps Engineer: $100,000 - $130,000</a></li>
-            <li><a href="#">Data Scientist: $110,000 - $140,000</a></li>
-        </ul>
+        <div class="badge">Software Engineer: $90,000 - $120,000</div>
+        <div class="badge">DevOps Engineer: $100,000 - $130,000</div>
+        <div class="badge">Data Scientist: $110,000 - $140,000</div>
+        <div class="badge">Project Manager: $85,000 - $115,000</div>
+        <div class="badge">Product Manager: $95,000 - $125,000</div>
+        <div class="badge">UI/UX Designer: $75,000 - $105,000</div>
+        <div class="badge">Frontend Developer: $80,000 - $110,000</div>
+        <div class="badge">Backend Developer: $90,000 - $120,000</div>
+        <div class="badge">Full Stack Developer: $95,000 - $125,000</div>
+        <div class="badge">Systems Administrator: $70,000 - $100,000</div>
+        <div class="badge">Network Engineer: $80,000 - $110,000</div>
+        <div class="badge">Database Administrator: $85,000 - $115,000</div>
+        <div class="badge">Cybersecurity Analyst: $90,000 - $120,000</div>
+        <div class="badge">Data Engineer: $100,000 - $130,000</div>
+        <div class="badge">Machine Learning Engineer: $105,000 - $135,000</div>
+        <div class="badge">Cloud Engineer: $95,000 - $125,000</div>
+        <div class="badge">DevOps Manager: $110,000 - $140,000</div>
+        <div class="badge">QA Engineer: $70,000 - $100,000</div>
+        <div class="badge">Business Analyst: $80,000 - $110,000</div>
+        <div class="badge">Technical Writer: $65,000 - $95,000</div>
         <h2>Job Sites</h2>
-        <ul>
-            <li><a href="https://www.linkedin.com/talent/">LinkedIn Recruiter</a></li>
-            <li><a href="https://www.offerzen.com/">OfferZen</a></li>
-            <li><a href="https://breezy.hr/">Breezy HR</a></li>
-            <li><a href="https://www.hirevue.com/">HireVue</a></li>
-            <li><a href="https://www.jobvite.com/">Jobvite</a></li>
-            <li><a href="https://www.workable.com/">Workable</a></li>
-            <li><a href="https://recruitee.com/">Recruitee</a></li>
-            <li><a href="https://www.bullhorn.com/">Bullhorn</a></li>
-            <li><a href="https://www.glassdoor.com/index.htm">Glassdoor</a></li>
-            <li><a href="https://www.pnet.co.za/">PNet</a></li>
-            <li><a href="https://www.xref.com/">Xref</a></li>
-            <li><a href="https://www.skillsurvey.com/">SkillSurvey</a></li>
-            <li><a href="https://www.hackerrank.com/">HackerRank</a></li>
-            <li><a href="https://codesignal.com/">CodeSignal</a></li>
-            <li><a href="https://www.wamly.io/">Wamly</a></li>
-            <li><a href="https://www.indeed.com/">Indeed</a></li>
-            <li><a href="https://www.careerbuilder.com/">CareerBuilder</a></li>
-            <li><a href="https://www.simplyhired.com/">SimplyHired</a></li>
-            <li><a href="https://www.monster.com/">Monster</a></li>
-            <li><a href="https://www.ziprecruiter.com/">ZipRecruiter</a></li>
-        </ul>
+        <div class="columns">
+            <div class="column">
+                <ul>
+                    <li><a href="https://www.linkedin.com/talent/">LinkedIn Recruiter</a></li>
+                    <li><a href="https://www.offerzen.com/">OfferZen</a></li>
+                    <li><a href="https://breezy.hr/">Breezy HR</a></li>
+                    <li><a href="https://www.hirevue.com/">HireVue</a></li>
+                    <li><a href="https://www.jobvite.com/">Jobvite</a></li>
+                    <li><a href="https://www.workable.com/">Workable</a></li>
+                    <li><a href="https://recruitee.com/">Recruitee</a></li>
+                    <li><a href="https://www.bullhorn.com/">Bullhorn</a></li>
+                    <li><a href="https://www.glassdoor.com/index.htm">Glassdoor</a></li>
+                    <li><a href="https://www.pnet.co.za/">PNet</a></li>
+                    <li><a href="https://www.xref.com/">Xref</a></li>
+                    <li><a href="https://www.skillsurvey.com/">SkillSurvey</a></li>
+                    <li><a href="https://www.hackerrank.com/">HackerRank</a></li>
+                    <li><a href="https://codesignal.com/">CodeSignal</a></li>
+                    <li><a href="https://www.wamly.io/">Wamly</a></li>
+                    <li><a href="https://www.indeed.com/">Indeed</a></li>
+                    <li><a href="https://www.careerbuilder.com/">CareerBuilder</a></li>
+                    <li><a href="https://www.simplyhired.com/">SimplyHired</a></li>
+                    <li><a href="https://www.monster.com/">Monster</a></li>
+                    <li><a href="https://www.ziprecruiter.com/">ZipRecruiter</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <ul>
+                    <li><a href="https://remoteok.io/">Remote OK</a></li>
+                    <li><a href="https://weworkremotely.com/">We Work Remotely</a></li>
+                    <li><a href="https://angel.co/jobs">AngelList</a></li>
+                    <li><a href="https://www.flexjobs.com/">FlexJobs</a></li>
+                    <li><a href="https://remotive.io/">Remotive</a></li>
+                    <li><a href="https://justremote.co/">JustRemote</a></li>
+                    <li><a href="https://www.virtualvocations.com/">Virtual Vocations</a></li>
+                    <li><a href="https://jobspresso.co/">Jobspresso</a></li>
+                    <li><a href="https://remote.co/remote-jobs/">Remote.co</a></li>
+                    <li><a href="https://www.remotees.com/">Remotees</a></li>
+                    <li><a href="https://www.europelanguagejobs.com/">Europe Language Jobs</a></li>
+                    <li><a href="https://www.powertofly.com/">PowerToFly</a></li>
+                    <li><a href="https://www.themuse.com/">The Muse</a></li>
+                    <li><a href="https://www.himalayas.app/">Himalayas</a></li>
+                    <li><a href="https://www.outsourcely.com/">Outsourcely</a></li>
+                    <li><a href="https://remoteleaf.com/">RemoteLeaf</a></li>
+                    <li><a href="https://www.wfh.io/">WFH.io</a></li>
+                    <li><a href="https://www.nodeflair.com/">NodeFlair</a></li>
+                    <li><a href="https://www.remotepanda.com/">RemotePanda</a></li>
+                </ul>
+            </div>
+        </div>
         <footer>
             <p>&copy; 2024 Skunkworks. All rights reserved.</p>
         </footer>
