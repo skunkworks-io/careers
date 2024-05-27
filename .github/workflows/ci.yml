@@ -169,5 +169,14 @@ SOFTWARE.
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
         git add index.html README.md LICENSE
-        git commit -m 'Create or update index.html, README.md, LICENSE'
-        git push
+        git commit -m 'Create or update index.html, README.md, LICENSE' || echo "Nothing to commit"
+        git pull origin main --rebase
+        git push origin main
+
+    - name: Handle Divergent Branches
+      if: failure()
+      run: |
+        echo "Handling divergent branches"
+        git config pull.rebase false
+        git pull origin main
+        git push origin main
