@@ -12,104 +12,112 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - name: Checkout repository
+      uses: actions/checkout@v4
 
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
         node-version: '14'
 
-    - name: Create or Update Content
+    - name: Check repository structure and create missing files
       run: |
-        # Create index.html if it doesn't exist
-        if [ ! -f index.html ]; then
-          echo 'Creating index.html'
-          echo '<!DOCTYPE html>
-          <html lang="en">
-          <head>
-              <meta charset="UTF-8">
-              <meta name="viewport" content="width=device-width, initial-scale=1.0">
-              <title>Careers</title>
-              <style>
-                  body {
-                      font-family: Arial, sans-serif;
-                      background-color: #f4f4f4;
-                      margin: 0;
-                      padding: 20px;
-                  }
-                  .container {
-                      width: 80%;
-                      margin: auto;
-                      background-color: #fff;
-                      padding: 20px;
-                      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-                  }
-                  h1 {
-                      text-align: center;
-                      color: #333;
-                  }
-                  h2 {
-                      color: #666;
-                  }
-                  p {
-                      color: #555;
-                      line-height: 1.6;
-                  }
-                  ul {
-                      list-style: none;
-                      padding: 0;
-                  }
-                  li {
-                      margin: 10px 0;
-                  }
-                  a {
-                      color: #007acc;
-                      text-decoration: none;
-                  }
-                  a:hover {
-                      text-decoration: underline;
-                  }
-              </style>
-          </head>
-          <body>
-              <div class="container">
-                  <h1>Careers at Skunkworks</h1>
-                  <h2>Job Listings</h2>
-                  <ul>
-                      <li><a href="#">Software Engineer</a></li>
-                      <li><a href="#">DevOps Engineer</a></li>
-                      <li><a href="#">Data Scientist</a></li>
-                  </ul>
-                  <h2>Demo Interview Scenarios</h2>
-                  <ul>
-                      <li><a href="#">Scenario 1: Technical Interview</a></li>
-                      <li><a href="#">Scenario 2: Behavioral Interview</a></li>
-                  </ul>
-                  <h2>CV Templates</h2>
-                  <ul>
-                      <li><a href="#">Template 1: Software Engineer</a></li>
-                      <li><a href="#">Template 2: DevOps Engineer</a></li>
-                  </ul>
-                  <h2>Best Practices</h2>
-                  <ul>
-                      <li><a href="#">Resume Writing</a></li>
-                      <li><a href="#">Interview Preparation</a></li>
-                  </ul>
-                  <h2>Average Salaries</h2>
-                  <ul>
-                      <li><a href="#">Software Engineer: $90,000 - $120,000</a></li>
-                      <li><a href="#">DevOps Engineer: $100,000 - $130,000</a></li>
-                      <li><a href="#">Data Scientist: $110,000 - $140,000</a></li>
-                  </ul>
-              </div>
-          </body>
-          </html>' > index.html
-        fi
+        set -e
+        # Function to create a file with content if it doesn't exist
+        create_file() {
+          local filename="$1"
+          local content="$2"
+          if [ ! -f "$filename" ]; then
+            echo "Creating $filename"
+            echo "$content" > "$filename"
+          else
+            echo "$filename already exists."
+          fi
+        }
 
-        # Create README.md if it doesn't exist
-        if [ ! -f README.md ]; then
-          echo 'Creating README.md'
-          echo '# Careers at Skunkworks
+        # Define content for the files
+        INDEX_HTML_CONTENT='<!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Careers</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    background-color: #f4f4f4;
+                    margin: 0;
+                    padding: 20px;
+                }
+                .container {
+                    width: 80%;
+                    margin: auto;
+                    background-color: #fff;
+                    padding: 20px;
+                    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+                }
+                h1 {
+                    text-align: center;
+                    color: #333;
+                }
+                h2 {
+                    color: #666;
+                }
+                p {
+                    color: #555;
+                    line-height: 1.6;
+                }
+                ul {
+                    list-style: none;
+                    padding: 0;
+                }
+                li {
+                    margin: 10px 0;
+                }
+                a {
+                    color: #007acc;
+                    text-decoration: none;
+                }
+                a:hover {
+                    text-decoration: underline;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <h1>Careers at Skunkworks</h1>
+                <h2>Job Listings</h2>
+                <ul>
+                    <li><a href="#">Software Engineer</a></li>
+                    <li><a href="#">DevOps Engineer</a></li>
+                    <li><a href="#">Data Scientist</a></li>
+                </ul>
+                <h2>Demo Interview Scenarios</h2>
+                <ul>
+                    <li><a href="#">Scenario 1: Technical Interview</a></li>
+                    <li><a href="#">Scenario 2: Behavioral Interview</a></li>
+                </ul>
+                <h2>CV Templates</h2>
+                <ul>
+                    <li><a href="#">Template 1: Software Engineer</a></li>
+                    <li><a href="#">Template 2: DevOps Engineer</a></li>
+                </ul>
+                <h2>Best Practices</h2>
+                <ul>
+                    <li><a href="#">Resume Writing</a></li>
+                    <li><a href="#">Interview Preparation</a></li>
+                </ul>
+                <h2>Average Salaries</h2>
+                <ul>
+                    <li><a href="#">Software Engineer: $90,000 - $120,000</a></li>
+                    <li><a href="#">DevOps Engineer: $100,000 - $130,000</a></li>
+                    <li><a href="#">Data Scientist: $110,000 - $140,000</a></li>
+                </ul>
+            </div>
+        </body>
+        </html>'
+        
+        README_CONTENT='# Careers at Skunkworks
 
 This repository contains information about current job openings, interview scenarios, CV templates, best practices, and average salaries for various roles in the tech industry.
 
@@ -134,13 +142,9 @@ This repository contains information about current job openings, interview scena
 - Software Engineer: \$90,000 - \$120,000
 - DevOps Engineer: \$100,000 - \$130,000
 - Data Scientist: \$110,000 - \$140,000
-' > README.md
-        fi
+'
 
-        # Create LICENSE if it doesn't exist
-        if [ ! -f LICENSE ]; then
-          echo 'Creating LICENSE'
-          echo 'MIT License
+        LICENSE_CONTENT='MIT License
 
 Copyright (c) 2024 Skunkworks
 
@@ -161,17 +165,22 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-' > LICENSE
-        fi
+'
+
+        # Create files if they do not exist
+        create_file "index.html" "$INDEX_HTML_CONTENT"
+        create_file "README.md" "$README_CONTENT"
+        create_file "LICENSE" "$LICENSE_CONTENT"
 
     - name: Commit and push changes
       run: |
+        set -e
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
         git add index.html README.md LICENSE
         git commit -m 'Create or update index.html, README.md, LICENSE' || echo "Nothing to commit"
-        git pull origin main --rebase
-        git push origin main
+        git pull origin main --rebase || echo "Failed to pull with rebase"
+        git push origin main || echo "Failed to push changes"
 
     - name: Handle Divergent Branches
       if: failure()
