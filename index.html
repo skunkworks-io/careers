@@ -18,7 +18,7 @@
         }
         .container {
             width: 80%;
-            max-width: 1000px;
+            max-width: 1200px;
             background-color: #fff;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -38,39 +38,34 @@
             color: #555;
             line-height: 1.6;
         }
-        ul {
-            list-style: none;
-            padding: 0;
+        .job-site-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
             width: 100%;
-            text-align: left;
         }
-        li {
-            margin: 10px 0;
+        .job-site {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            text-align: center;
         }
-        a {
-            color: #007acc;
+        .job-site img {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+        }
+        .job-site a {
+            display: block;
+            padding: 10px;
             text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .badge {
-            display: inline-block;
-            background-color: #007acc;
-            color: white;
-            padding: 10px 20px;
-            margin: 10px;
-            border-radius: 20px;
-            font-size: 1.2em;
+            color: #007acc;
             font-weight: bold;
         }
-        .columns {
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-        }
-        .column {
-            width: 45%;
+        .job-site a:hover {
+            background-color: #f4f4f4;
         }
         footer {
             text-align: center;
@@ -85,96 +80,164 @@
 <body>
     <div class="container">
         <h1>Careers at Skunkworks</h1>
-        <h2>Job Listings</h2>
-        <ul>
-            <li><a href="#">Software Engineer</a></li>
-            <li><a href="#">DevOps Engineer</a></li>
-            <li><a href="#">Data Scientist</a></li>
-        </ul>
-        <h2>Demo Interview Scenarios</h2>
-        <ul>
-            <li><a href="#">Scenario 1: Technical Interview</a></li>
-            <li><a href="#">Scenario 2: Behavioral Interview</a></li>
-        </ul>
-        <h2>CV Templates</h2>
-        <ul>
-            <li><a href="#">Template 1: Software Engineer</a></li>
-            <li><a href="#">Template 2: DevOps Engineer</a></li>
-        </ul>
-        <h2>Best Practices</h2>
-        <ul>
-            <li><a href="#">Resume Writing</a></li>
-            <li><a href="#">Interview Preparation</a></li>
-        </ul>
-        <h2>Average Salaries</h2>
-        <div class="badge">Software Engineer: $90,000 - $120,000</div>
-        <div class="badge">DevOps Engineer: $100,000 - $130,000</div>
-        <div class="badge">Data Scientist: $110,000 - $140,000</div>
-        <div class="badge">Project Manager: $85,000 - $115,000</div>
-        <div class="badge">Product Manager: $95,000 - $125,000</div>
-        <div class="badge">UI/UX Designer: $75,000 - $105,000</div>
-        <div class="badge">Frontend Developer: $80,000 - $110,000</div>
-        <div class="badge">Backend Developer: $90,000 - $120,000</div>
-        <div class="badge">Full Stack Developer: $95,000 - $125,000</div>
-        <div class="badge">Systems Administrator: $70,000 - $100,000</div>
-        <div class="badge">Network Engineer: $80,000 - $110,000</div>
-        <div class="badge">Database Administrator: $85,000 - $115,000</div>
-        <div class="badge">Cybersecurity Analyst: $90,000 - $120,000</div>
-        <div class="badge">Data Engineer: $100,000 - $130,000</div>
-        <div class="badge">Machine Learning Engineer: $105,000 - $135,000</div>
-        <div class="badge">Cloud Engineer: $95,000 - $125,000</div>
-        <div class="badge">DevOps Manager: $110,000 - $140,000</div>
-        <div class="badge">QA Engineer: $70,000 - $100,000</div>
-        <div class="badge">Business Analyst: $80,000 - $110,000</div>
-        <div class="badge">Technical Writer: $65,000 - $95,000</div>
         <h2>Job Sites</h2>
-        <div class="columns">
-            <div class="column">
-                <ul>
-                    <li><a href="https://www.linkedin.com/talent/">LinkedIn Recruiter</a></li>
-                    <li><a href="https://www.offerzen.com/">OfferZen</a></li>
-                    <li><a href="https://breezy.hr/">Breezy HR</a></li>
-                    <li><a href="https://www.hirevue.com/">HireVue</a></li>
-                    <li><a href="https://www.jobvite.com/">Jobvite</a></li>
-                    <li><a href="https://www.workable.com/">Workable</a></li>
-                    <li><a href="https://recruitee.com/">Recruitee</a></li>
-                    <li><a href="https://www.bullhorn.com/">Bullhorn</a></li>
-                    <li><a href="https://www.glassdoor.com/index.htm">Glassdoor</a></li>
-                    <li><a href="https://www.pnet.co.za/">PNet</a></li>
-                    <li><a href="https://www.xref.com/">Xref</a></li>
-                    <li><a href="https://www.skillsurvey.com/">SkillSurvey</a></li>
-                    <li><a href="https://www.hackerrank.com/">HackerRank</a></li>
-                    <li><a href="https://codesignal.com/">CodeSignal</a></li>
-                    <li><a href="https://www.wamly.io/">Wamly</a></li>
-                    <li><a href="https://www.indeed.com/">Indeed</a></li>
-                    <li><a href="https://www.careerbuilder.com/">CareerBuilder</a></li>
-                    <li><a href="https://www.simplyhired.com/">SimplyHired</a></li>
-                    <li><a href="https://www.monster.com/">Monster</a></li>
-                    <li><a href="https://www.ziprecruiter.com/">ZipRecruiter</a></li>
-                </ul>
+        <div class="job-site-grid">
+            <div class="job-site">
+                <img src="https://via.placeholder.com/150" alt="LinkedIn Recruiter">
+                <a href="https://www.linkedin.com/talent/">LinkedIn Recruiter</a>
             </div>
-            <div class="column">
-                <ul>
-                    <li><a href="https://remoteok.io/">Remote OK</a></li>
-                    <li><a href="https://weworkremotely.com/">We Work Remotely</a></li>
-                    <li><a href="https://angel.co/jobs">AngelList</a></li>
-                    <li><a href="https://www.flexjobs.com/">FlexJobs</a></li>
-                    <li><a href="https://remotive.io/">Remotive</a></li>
-                    <li><a href="https://justremote.co/">JustRemote</a></li>
-                    <li><a href="https://www.virtualvocations.com/">Virtual Vocations</a></li>
-                    <li><a href="https://jobspresso.co/">Jobspresso</a></li>
-                    <li><a href="https://remote.co/remote-jobs/">Remote.co</a></li>
-                    <li><a href="https://www.remotees.com/">Remotees</a></li>
-                    <li><a href="https://www.europelanguagejobs.com/">Europe Language Jobs</a></li>
-                    <li><a href="https://www.powertofly.com/">PowerToFly</a></li>
-                    <li><a href="https://www.themuse.com/">The Muse</a></li>
-                    <li><a href="https://www.himalayas.app/">Himalayas</a></li>
-                    <li><a href="https://www.outsourcely.com/">Outsourcely</a></li>
-                    <li><a href="https://remoteleaf.com/">RemoteLeaf</a></li>
-                    <li><a href="https://www.wfh.io/">WFH.io</a></li>
-                    <li><a href="https://www.nodeflair.com/">NodeFlair</a></li>
-                    <li><a href="https://www.remotepanda.com/">RemotePanda</a></li>
-                </ul>
+            <div class="job-site">
+                <img src="https://via.placeholder.com/150" alt="OfferZen">
+                <a href="https://www.offerzen.com/">OfferZen</a>
+            </div>
+            <div class="job-site">
+                <img src="https://via.placeholder.com/150" alt="Breezy HR">
+                <a href="https://breezy.hr/">Breezy HR</a>
+            </div>
+            <div class="job-site">
+                <img src="https://via.placeholder.com/150" alt="HireVue">
+                <a href="https://www.hirevue.com/">HireVue</a>
+            </div>
+            <div class="job-site">
+                <img src="https://via.placeholder.com/150" alt="Jobvite">
+                <a href="https://www.jobvite.com/">Jobvite</a>
+            </div>
+            <div class="job-site">
+                <img src="https://via.placeholder.com/150" alt="Workable">
+                <a href="https://www.workable.com/">Workable</a>
+            </div>
+            <div class="job-site">
+                <img src="https://via.placeholder.com/150" alt="Recruitee">
+                <a href="https://recruitee.com/">Recruitee</a>
+            </div>
+            <div class="job-site">
+                <img src="https://via.placeholder.com/150" alt="Bullhorn">
+                <a href="https://www.bullhorn.com/">Bullhorn</a>
+            </div>
+            <div class="job-site">
+                <img src="https://via.placeholder.com/150" alt="Glassdoor">
+                <a href="https://www.glassdoor.com/index.htm">Glassdoor</a>
+            </div>
+            <div class="job-site">
+                <img src="https://via.placeholder.com/150" alt="PNet">
+                <a href="https://www.pnet.co.za/">PNet</a>
+            </div>
+            <div class="job-site">
+                <img src="https://via.placeholder.com/150" alt="Xref">
+                <a href="https://www.xref.com/">Xref</a>
+            </div>
+            <div class="job-site">
+                <img src="https://via.placeholder.com/150" alt="SkillSurvey">
+                <a href="https://www.skillsurvey.com/">SkillSurvey</a>
+            </div>
+            <div class="job-site">
+                <img src="https://via.placeholder.com/150" alt="HackerRank">
+                <a href="https://www.hackerrank.com/">HackerRank</a>
+            </div>
+            <div class="job-site">
+                <img src="https://via.placeholder.com/150" alt="CodeSignal">
+                <a href="https://codesignal.com/">CodeSignal</a>
+            </div>
+            <div class="job-site">
+                <img src="https://via.placeholder.com/150" alt="Wamly">
+                <a href="https://www.wamly.io/">Wamly</a>
+            </div>
+            <div class="job-site">
+                <img src="https://via.placeholder.com/150" alt="Indeed">
+                <a href="https://www.indeed.com/">Indeed</a>
+            </div>
+            <div class="job-site">
+                <img src="https://via.placeholder.com/150" alt="CareerBuilder">
+                <a href="https://www.careerbuilder.com/">CareerBuilder</a>
+            </div>
+            <div class="job-site">
+                <img src="https://via.placeholder.com/150" alt="SimplyHired">
+                <a href="https://www.simplyhired.com/">SimplyHired</a>
+            </div>
+            <div class="job-site">
+                <img src="https://via.placeholder.com/150" alt
+                <img src="https://via.placeholder.com/150" alt="Monster">
+                <a href="https://www.monster.com/">Monster</a>
+            </div>
+            <div class="job-site">
+                <img src="https://via.placeholder.com/150" alt="ZipRecruiter">
+                <a href="https://www.ziprecruiter.com/">ZipRecruiter</a>
+            </div>
+            <div class="job-site">
+                <img src="https://via.placeholder.com/150" alt="Remote OK">
+                <a href="https://remoteok.io/">Remote OK</a>
+            </div>
+            <div class="job-site">
+                <img src="https://via.placeholder.com/150" alt="We Work Remotely">
+                <a href="https://weworkremotely.com/">We Work Remotely</a>
+            </div>
+            <div class="job-site">
+                <img src="https://via.placeholder.com/150" alt="AngelList">
+                <a href="https://angel.co/jobs">AngelList</a>
+            </div>
+            <div class="job-site">
+                <img src="https://via.placeholder.com/150" alt="FlexJobs">
+                <a href="https://www.flexjobs.com/">FlexJobs</a>
+            </div>
+            <div class="job-site">
+                <img src="https://via.placeholder.com/150" alt="Remotive">
+                <a href="https://remotive.io/">Remotive</a>
+            </div>
+            <div class="job-site">
+                <img src="https://via.placeholder.com/150" alt="JustRemote">
+                <a href="https://justremote.co/">JustRemote</a>
+            </div>
+            <div class="job-site">
+                <img src="https://via.placeholder.com/150" alt="Virtual Vocations">
+                <a href="https://www.virtualvocations.com/">Virtual Vocations</a>
+            </div>
+            <div class="job-site">
+                <img src="https://via.placeholder.com/150" alt="Jobspresso">
+                <a href="https://jobspresso.co/">Jobspresso</a>
+            </div>
+            <div class="job-site">
+                <img src="https://via.placeholder.com/150" alt="Remote.co">
+                <a href="https://remote.co/remote-jobs/">Remote.co</a>
+            </div>
+            <div class="job-site">
+                <img src="https://via.placeholder.com/150" alt="Remotees">
+                <a href="https://www.remotees.com/">Remotees</a>
+            </div>
+            <div class="job-site">
+                <img src="https://via.placeholder.com/150" alt="Europe Language Jobs">
+                <a href="https://www.europelanguagejobs.com/">Europe Language Jobs</a>
+            </div>
+            <div class="job-site">
+                <img src="https://via.placeholder.com/150" alt="PowerToFly">
+                <a href="https://www.powertofly.com/">PowerToFly</a>
+            </div>
+            <div class="job-site">
+                <img src="https://via.placeholder.com/150" alt="The Muse">
+                <a href="https://www.themuse.com/">The Muse</a>
+            </div>
+            <div class="job-site">
+                <img src="https://via.placeholder.com/150" alt="Himalayas">
+                <a href="https://www.himalayas.app/">Himalayas</a>
+            </div>
+            <div class="job-site">
+                <img src="https://via.placeholder.com/150" alt="Outsourcely">
+                <a href="https://www.outsourcely.com/">Outsourcely</a>
+            </div>
+            <div class="job-site">
+                <img src="https://via.placeholder.com/150" alt="RemoteLeaf">
+                <a href="https://remoteleaf.com/">RemoteLeaf</a>
+            </div>
+            <div class="job-site">
+                <img src="https://via.placeholder.com/150" alt="WFH.io">
+                <a href="https://www.wfh.io/">WFH.io</a>
+            </div>
+            <div class="job-site">
+                <img src="https://via.placeholder.com/150" alt="NodeFlair">
+                <a href="https://www.nodeflair.com/">NodeFlair</a>
+            </div>
+            <div class="job-site">
+                <img src="https://via.placeholder.com/150" alt="RemotePanda">
+                <a href="https://www.remotepanda.com/">RemotePanda</a>
             </div>
         </div>
         <footer>
