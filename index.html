@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Careers at Skunkworks</title>
-    <link rel="icon" href="https://raw.githubusercontent.com/skunkworksza/Media/32845115f408b71724403da1613047a2facf659c/Untitled%20(250%20x%20250%20px).svg" type="image/svg+xml">
+    <title>Cyber Retaliator Solutions Training</title>
+    <link rel="stylesheet" href="styles/main.css">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap');
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'IBM Plex Sans', Arial, sans-serif;
             background-color: #f4f4f4;
             margin: 0;
-            padding: 0;
+            padding: 20px;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
             text-align: center;
         }
         .container {
@@ -23,29 +23,23 @@
             background-color: #fff;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            text-align: left;
         }
-        h1 {
-            text-align: center;
-            color: #333;
+        h1, h2, h3 {
+            color: #0f62fe;
         }
-        h2 {
-            color: #666;
+        .section {
+            margin-bottom: 40px;
         }
-        p {
-            color: #555;
-            line-height: 1.6;
+        .content {
+            margin-bottom: 20px;
         }
-        .job-site-grid {
+        .badge-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 20px;
-            width: 100%;
         }
-        .job-site {
+        .badge-item {
             background-color: #fff;
             border: 1px solid #ddd;
             border-radius: 10px;
@@ -54,26 +48,26 @@
             text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .job-site:hover {
+        .badge-item:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 30px rgba(0,0,0,0.2);
         }
-        .job-site img {
+        .badge-item img {
             width: 100%;
             height: 100px;
             object-fit: cover;
         }
-        .job-site a {
+        .badge-item a {
             display: block;
             padding: 10px;
             text-decoration: none;
             color: #007acc;
             font-weight: bold;
         }
-        .job-site a:hover {
+        .badge-item a:hover {
             background-color: #f4f4f4;
         }
-        footer {
+        .footer {
             text-align: center;
             padding: 10px;
             background-color: #333;
@@ -81,182 +75,68 @@
             margin-top: 20px;
             width: 100%;
         }
+        .sidebar-left, .sidebar-right {
+            width: 20%;
+            padding: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .content {
+            width: 60%;
+            padding: 10px;
+        }
+        .sidebar-left ul, .sidebar-right ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar-left ul li, .sidebar-right ul li {
+            margin: 10px 0;
+        }
+        .sidebar-left ul li a, .sidebar-right ul li a {
+            text-decoration: none;
+            color: #0f62fe;
+        }
+        .sidebar-left ul li a:hover, .sidebar-right ul li a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Careers at Skunkworks</h1>
-        <h2>Job Sites</h2>
-        <div class="job-site-grid">
-            <div class="job-site">
-                <img src="https://logo.clearbit.com/linkedin.com" alt="LinkedIn Recruiter">
-                <a href="https://www.linkedin.com/talent/">LinkedIn Recruiter</a>
-            </div>
-            <div class="job-site">
-                <img src="https://logo.clearbit.com/offerzen.com" alt="OfferZen">
-                <a href="https://www.offerzen.com/">OfferZen</a>
-            </div>
-            <div class="job-site">
-                <img src="https://logo.clearbit.com/breezy.hr" alt="Breezy HR">
-                <a href="https://breezy.hr/">Breezy HR</a>
-            </div>
-            <div class="job-site">
-                <img src="https://logo.clearbit.com/hirevue.com" alt="HireVue">
-                <a href="https://www.hirevue.com/">HireVue</a>
-            </div>
-            <div class="job-site">
-                <img src="https://logo.clearbit.com/jobvite.com" alt="Jobvite">
-                <a href="https://www.jobvite.com/">Jobvite</a>
-            </div>
-            <div class="job-site">
-                <img src="https://logo.clearbit.com/workable.com" alt="Workable">
-                <a href="https://www.workable.com/">Workable</a>
-            </div>
-            <div class="job-site">
-                <img src="https://logo.clearbit.com/recruitee.com" alt="Recruitee">
-                <a href="https://recruitee.com/">Recruitee</a>
-            </div>
-            <div class="job-site">
-                <img src="https://logo.clearbit.com/bullhorn.com" alt="Bullhorn">
-                <a href="https://www.bullhorn.com/">Bullhorn</a>
-            </div>
-            <div class="job-site">
-                <img src="https://logo.clearbit.com/glassdoor.com" alt="Glassdoor">
-                <a href="https://www.glassdoor.com/index.htm">Glassdoor</a>
-            </div>
-            <div class="job-site">
-                <img src="https://logo.clearbit.com/pnet.co.za" alt="PNet">
-                <a href="https://www.pnet.co.za/">PNet</a>
-            </div>
-            <div class="job-site">
-                <img src="https://logo.clearbit.com/xref.com" alt="Xref">
-                <a href="https://www.xref.com/">Xref</a>
-            </div>
-            <div class="job-site">
-                <img src="https://logo.clearbit.com/skillsurvey.com" alt="SkillSurvey">
-                <a href="https://www.skillsurvey.com/">SkillSurvey</a>
-            </div>
-            <div class="job-site">
-                <img src="https://logo.clearbit.com/hackerrank.com" alt="HackerRank">
-                <a href="https://www.hackerrank.com/">HackerRank</a>
-            </div>
-            <div class="job-site">
-                <img src="https://logo.clearbit.com/codesignal.com" alt="CodeSignal">
-                <a href="https://codesignal.com/">CodeSignal</a>
-            </div>
-            <div class="job-site">
-                <img src="https://logo.clearbit.com/wamly.io" alt="Wamly">
-                <a href="https://www.wamly.io/">Wamly</a>
-            </div>
-            <div class="job-site">
-                <img src="https://logo.clearbit.com/indeed.com" alt="Indeed">
-                <a href="https://www.indeed.com/">Indeed</a>
-            </div>
-            <div class="job-site">
-                <img src="https://logo.clearbit.com/careerbuilder.com" alt="CareerBuilder">
-                <a href="https://www.careerbuilder.com/">CareerBuilder</a>
-            </div>
-            <div class="job-site">
-                <img src="https://logo.clearbit.com/simplyhired.com" alt="SimplyHired">
-                <a href="https://www.simplyhired.com/">SimplyHired</a>
-            </div>
-            <div class="job-site">
-                <img src="https://logo.clearbit.com/monster.com" alt="Monster">
-                <a href="https://www.monster.com/">Monster</a>
-            </div>
-            <div class="job-site">
-                <img src="https://logo.clearbit.com/ziprecruiter.com" alt="ZipRecruiter">
-                <a href="https://www.ziprecruiter.com/">ZipRecruiter</a>
-            </div>
-            <div class="job-site">
-                <img src="https://logo.clearbit.com/remoteok.io" alt="Remote OK">
-                <a href="https://remoteok.io/">Remote OK</a>
-            </div>
-            <div class="job-site">
-                <img src="https://logo.clearbit.com/weworkremotely.com" alt="We Work Remotely">
-                <a href="https://weworkremotely.com/">We Work Remotely</a>
-            </div>
-            <div class="job-site">
-                <img src="https://logo.clearbit.com/angel.co" alt="AngelList">
-                <a href="https://angel.co/jobs">AngelList</a>
-            </div>
-            <div class="job-site">
-                <img src="https://logo.clearbit.com/flexjobs.com" alt="FlexJobs">
-                <a href="https://www.flexjobs.com/">FlexJobs</a>
-            </div>
-            <div class="job-site">
-                <img src="https://logo.clearbit.com/remotive.io" alt="Remotive">
-                <a href="https://remotive.io/">Remotive</a>
-            </div>
-            <div class="job-site">
-                <img src="https://logo.clearbit.com/justremote.co" alt="JustRemote">
-                <a href="https://justremote.co/">JustRemote</a>
-            </div>
-            <div class="job-site">
-                <img src="https://logo.clearbit.com/virtualvocations.com" alt="Virtual Vocations">
-                <a href="https://www.virtualvocations.com/">Virtual Vocations</a>
-            </div>
-            <div class="job-site">
-                         <img src="https://logo.clearbit.com/jobspresso.co" alt="Jobspresso">
-                <a href="https://jobspresso.co/">Jobspresso</a>
-            </div>
-            <div class="job-site">
-                <img src="https://logo.clearbit.com/remote.co" alt="Remote.co">
-                <a href="https://remote.co/remote-jobs/">Remote.co</a>
-            </div>
-            <div class="job-site">
-                <img src="https://logo.clearbit.com/remotees.com" alt="Remotees">
-                <a href="https://www.remotees.com/">Remotees</a>
-            </div>
-            <div class="job-site">
-                <img src="https://logo.clearbit.com/europelanguagejobs.com" alt="Europe Language Jobs">
-                <a href="https://www.europelanguagejobs.com/">Europe Language Jobs</a>
-            </div>
-            <div class="job-site">
-                <img src="https://logo.clearbit.com/powertofly.com" alt="PowerToFly">
-                <a href="https://www.powertofly.com/">PowerToFly</a>
-            </div>
-            <div class="job-site">
-                <img src="https://logo.clearbit.com/themuse.com" alt="The Muse">
-                <a href="https://www.themuse.com/">The Muse</a>
-            </div>
-            <div class="job-site">
-                <img src="https://logo.clearbit.com/himalayas.app" alt="Himalayas">
-                <a href="https://www.himalayas.app/">Himalayas</a>
-            </div>
-            <div class="job-site">
-                <img src="https://logo.clearbit.com/outsourcely.com" alt="Outsourcely">
-                <a href="https://www.outsourcely.com/">Outsourcely</a>
-            </div>
-            <div class="job-site">
-                <img src="https://logo.clearbit.com/remoteleaf.com" alt="RemoteLeaf">
-                <a href="https://remoteleaf.com/">RemoteLeaf</a>
-            </div>
-            <div class="job-site">
-                <img src="https://logo.clearbit.com/wfh.io" alt="WFH.io">
-                <a href="https://www.wfh.io/">WFH.io</a>
-            </div>
-            <div class="job-site">
-                <img src="https://logo.clearbit.com/nodeflair.com" alt="NodeFlair">
-                <a href="https://www.nodeflair.com/">NodeFlair</a>
-            </div>
-            <div class="job-site">
-                <img src="https://logo.clearbit.com/remotepanda.com" alt="RemotePanda">
-                <a href="https://www.remotepanda.com/">RemotePanda</a>
-            </div>
-            <div class="job-site">
-                <img src="https://logo.clearbit.com/remoteco.com" alt="Remote.co">
-                <a href="https://remote.co/">Remote.co</a>
-            </div>
-            <div class="job-site">
-                <img src="https://logo.clearbit.com/remoteok.io" alt="Remote OK">
-                <a href="https://remoteok.io/">Remote OK</a>
-            </div>
-            <div class="job-site">
-                <img src="https://logo.clearbit.com/wwr.io" alt="We Work Remotely">
-                <a href="https://weworkremotely.com/">We Work Remotely</a>
-            </div>
+    <div class="sidebar-left">
+        <h2>Navigation</h2>
+        <ul>
+            <li><a href="safer-payments.html">IBM Safer Payments</a></li>
+            <li><a href="lab-requirements-ficon.html">Lab Requirements</a></li>
+            <li><a href="integrations-roadmap.html">Integrations Roadmap</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <h1>Welcome to Cyber Retaliator Solutions Training</h1>
+        <p>Select a training module from the navigation menu to get started.</p>
+    </div>
+    <div class="sidebar-right">
+        <h2>Additional Resources</h2>
+        <div class="course-details">
+            <h3>IBM z/OS Bootcamp</h3>
+            <p><a class="badge-link" href="https://www.ibm.com/training/course/ibm-zos-bootcamp-ESZ0G">View Course</a></p>
         </div>
+        <div class="course-details">
+            <h3>Fundamental System Skills in z/OS</h3>
+            <p><a class="badge-link" href="https://www.ibm.com/training/course/fundamental-system-skills-in-zos-ES10G">View Course</a></p>
+        </div>
+        <div class="course-details">
+            <h3>IBM System z HMC Operations</h3>
+            <p><a class="badge-link" href="https://www.ibm.com/training/course/ibm-system-z-hardware-management-console-hmc-operations-ES24G">View Course</a></p>
+        </div>
+        <div class="course-details">
+            <h3>HCD for z/OS</h3>
+            <p><a class="badge-link" href="https://www.ibm.com/training/course/hardware-configuration-and-definition-hcd-for-z-os-ES96G">View Course</a></p>
+        </div>
+        <div class="course-details">
+            <h3>Introduction to Storage</h3>
+            <p><a class="badge-link" href="https://www.ibm.com/training/course/introduction-to-storage-SS01G">View Course</a></p>
+        </div>
+    </div>
         <footer>
             <p>&copy; 2024 Skunkworks. All rights reserved.</p>
         </footer>
